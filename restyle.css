@@ -49,6 +49,7 @@ body {
     border: 3px solid transparent;
     border-color: #000;
     border-radius: 15px;
+    margin: 10px;
 }
 .individual {
     display: flex;
@@ -106,7 +107,6 @@ body {
   }
 
 .font {
-    padding-left: 50px;
     color: #ffffff;
     text-shadow:
     2.5px 2.1px 0 #000,
@@ -225,7 +225,40 @@ p {
     5.1% {
         background: linear-gradient(to bottom, #000, #000);
     }
-    18.25% {
+    7.9%{
+        background: linear-gradient(to bottom, #000, #000);
+    }
+    8%{
+        background: linear-gradient(to bottom, #000, #f8f800 20% 80%, #000);
+    }
+    9.5%{        
+        background: linear-gradient(to bottom, #000, #f8f800 20% 80%, #000);
+    }
+    10% {        
+        background: linear-gradient(45deg, #1818c8, #f8f800, #f80000);
+    }
+    11.5%{
+        background: linear-gradient(45deg, #1818c8, #f8f800, #f80000);
+    }
+    12%{
+        background: linear-gradient(to bottom, #000, #285858 20% 80%, #000);
+    }
+    13.5% {
+        background: linear-gradient(to bottom, #000, #285858 20% 80%, #000);
+    }
+    14% {
+        background: linear-gradient(to bottom, #000, #0058f8 20% 80%, #000);  
+    }
+    15.5% {
+        background: linear-gradient(to bottom, #000, #0058f8 20% 80%, #000);  
+    }
+    16% {
+        background: linear-gradient(to bottom, #000, #f8f8f8     20% 80%, #000); 
+    }
+    17.5% {
+        background: linear-gradient(to bottom, #000, #f8f8f8 20% 80%, #000); 
+   }
+    18% {
         background: linear-gradient(to bottom, #000, #000);
     }
     19% {
@@ -302,51 +335,105 @@ background: gold;
 border: 1px solid blue; */
 
 .takuya {
-    animation-name: fade;
+    animation-name: fadeinfadeout;
     animation-delay: calc(var(--tiempo)* .53);
     animation-duration: calc(var(--tiempo)* .1);
     opacity: 0%;
     animation-fill-mode: forwards;
+    transform: translateX(35%);
 }
 
 .zoe {
-    animation-name: fade;
+    animation-name: fadeinfadeout;
     animation-delay: calc(var(--tiempo)* .63);
     animation-duration: calc(var(--tiempo)* .1);
     opacity: 0%;
     animation-fill-mode: forwards;
+    transform: translateX(-50%);
 }
 
 .junpei {
-    animation-name: fade;
+    animation-name: fadeinfadeout;
     animation-delay: calc(var(--tiempo)* .73);
     animation-duration: calc(var(--tiempo)* .1);
     opacity: 0%;
     animation-fill-mode: forwards;
+    transform: translateX(35%);
 }
 
 .tommy {    
-    animation-name: fade;
+    animation-name: fadeinfadeout;
     animation-delay: calc(var(--tiempo)* .83);
     animation-duration: calc(var(--tiempo)* .09);
     opacity: 0%;
     animation-fill-mode: forwards;
+    transform: translateX(-50%);
 }
 
 .koji {    
-    animation-name: fade;
+    animation-name: koji;
     animation-delay: calc(var(--tiempo)* .92);
     animation-duration: calc(var(--tiempo)* .075);
     opacity: 0%;
     animation-fill-mode: forwards;
 }
 
+@keyframes koji {
+    0% {
+        transform: translateX(110%);
+        opacity: 0%;
+    }
+    25% {
+        opacity: 100%;
+    }
+    99% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+        transform: translateX(-50%);
+    }
+}
+
 .koichi {    
-    animation-name: fade;
+    animation-name: koichi;
     animation-delay: calc(var(--tiempo)* .95);
     animation-duration: calc(var(--tiempo)* .045);
     opacity: 0%;
     animation-fill-mode: forwards;
+    transform: translateX(55%);
+}
+
+@keyframes koichi {    
+    0% {
+        transform: translateX(-110%);
+        opacity: 0%;
+    }
+    25% {
+        opacity: 100%;
+    }
+    99% {
+        opacity: 100%;
+    }
+    100% {
+        transform: translateX(50%);
+        opacity: 0%;
+    }
+}
+
+@keyframes fadeinfadeout {
+    0% {
+        opacity: 0%;
+    }
+    25% {
+        opacity: 100%;
+    }
+    75% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
 }
 
 .agunimon {
@@ -402,22 +489,17 @@ border: 1px solid blue; */
 }
 
 @keyframes trainmove {
-    0%{
-        clip: rect(0, 10px, 450px, 0);
+    0% {
+        transform: translateX(1%);
         opacity: 100%;
     }
-    20% {
-        clip: rect(0, 1380px, 600px, 0);
-    }
-    99.99%{
+    99.99% {
         opacity: 100%;
     }
     100% {
-        clip: rect(0, 6900px, 450px, 5500px);
-        left: -5475px;
         opacity: 0%;
+        transform: translateX(-130%);
     }
-    
 }
 
 @keyframes fade {
