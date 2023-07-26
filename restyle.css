@@ -13,19 +13,20 @@ body {
     min-width: 1400px;
     min-height: 825px; 
     width: 100vw;
-    height: 100vh;
+    height: max-content;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     border: 50px solid transparent;
     padding: 10px;
-    border-image: url(borders.png) 16.55% round;
+    border-image: url(Animation_Assets/borders.png) 16.55% round;
     margin: 0px;
 }
 
 .mainmenu {
     max-width: 90vw;
-    background: url("background.png") center repeat-x, linear-gradient(to bottom, #080000 50%, #281888 50%);
+    background: url("Animation_Assets/background.png") center repeat-x, linear-gradient(to bottom, #080000 50%, #281888 50%);
     background-size: contain;
     background-repeat: repeat-x; 
     background-position: center;
@@ -42,8 +43,28 @@ body {
     background: url("Animation_Assets/sand.png") center repeat-x, linear-gradient(to bottom, #0048d8 50%, #e8dbab 50%);
     background-size: contain;
     background-repeat: repeat-x; 
+    background-position: center;  
+}
+.border {
+    border: 3px solid transparent;
+    border-color: #000;
+    border-radius: 15px;
+    margin: 10px;
+}
+.individual {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 90vw;
+    background: url("Animation_Assets/sand.png") center repeat-x, linear-gradient(to bottom, #0048d8 50%, #e8dbab 50%);
+    background-size: contain;
+    background-repeat: repeat-x; 
     background-position: center;
-    
+}
+.resultados {
+    padding: 10px;
 }
 
 .animationbox{
@@ -81,19 +102,30 @@ body {
     padding: 40px;
     cursor: pointer;
     background: transparent;
-    max-width: 350px;
     min-width: 300px;
-    width: calc(100% / 3);
+    width: max-content;
   }
-h1 {
+
+.font {
     color: #ffffff;
     text-shadow:
-    3px 3px 0 #000,
+    2.5px 2.1px 0 #000,
     -1px -1px 0 #000,  
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+h1 {
+
     font-size: 50px;
+}
+h2 {
+
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;
 }
 
   .transparent span {
@@ -138,7 +170,36 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
+
+.columnas {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.lowfadein {
+    animation-duration: 5s;
+    animation-name: lowfade;
+    animation-delay: 300ms;
+    animation-fill-mode: backwards;
+}
+
+@keyframes lowfade {
+    0% {
+        opacity: 0%;
+    }
+    25% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
 @keyframes backgroundanim {
     1.98% {
         background: linear-gradient(to bottom, #000, #000);
@@ -164,7 +225,40 @@ h1 {
     5.1% {
         background: linear-gradient(to bottom, #000, #000);
     }
-    18.25% {
+    7.9%{
+        background: linear-gradient(to bottom, #000, #000);
+    }
+    8%{
+        background: linear-gradient(to bottom, #000, #f8f800 20% 80%, #000);
+    }
+    9.5%{        
+        background: linear-gradient(to bottom, #000, #f8f800 20% 80%, #000);
+    }
+    10% {        
+        background: linear-gradient(45deg, #1818c8, #f8f800, #f80000);
+    }
+    11.5%{
+        background: linear-gradient(45deg, #1818c8, #f8f800, #f80000);
+    }
+    12%{
+        background: linear-gradient(to bottom, #000, #285858 20% 80%, #000);
+    }
+    13.5% {
+        background: linear-gradient(to bottom, #000, #285858 20% 80%, #000);
+    }
+    14% {
+        background: linear-gradient(to bottom, #000, #0058f8 20% 80%, #000);  
+    }
+    15.5% {
+        background: linear-gradient(to bottom, #000, #0058f8 20% 80%, #000);  
+    }
+    16% {
+        background: linear-gradient(to bottom, #000, #f8f8f8     20% 80%, #000); 
+    }
+    17.5% {
+        background: linear-gradient(to bottom, #000, #f8f8f8 20% 80%, #000); 
+   }
+    18% {
         background: linear-gradient(to bottom, #000, #000);
     }
     19% {
@@ -241,51 +335,105 @@ background: gold;
 border: 1px solid blue; */
 
 .takuya {
-    animation-name: fade;
+    animation-name: fadeinfadeout;
     animation-delay: calc(var(--tiempo)* .53);
     animation-duration: calc(var(--tiempo)* .1);
     opacity: 0%;
     animation-fill-mode: forwards;
+    transform: translateX(35%);
 }
 
 .zoe {
-    animation-name: fade;
+    animation-name: fadeinfadeout;
     animation-delay: calc(var(--tiempo)* .63);
     animation-duration: calc(var(--tiempo)* .1);
     opacity: 0%;
     animation-fill-mode: forwards;
+    transform: translateX(-50%);
 }
 
 .junpei {
-    animation-name: fade;
+    animation-name: fadeinfadeout;
     animation-delay: calc(var(--tiempo)* .73);
     animation-duration: calc(var(--tiempo)* .1);
     opacity: 0%;
     animation-fill-mode: forwards;
+    transform: translateX(35%);
 }
 
 .tommy {    
-    animation-name: fade;
+    animation-name: fadeinfadeout;
     animation-delay: calc(var(--tiempo)* .83);
     animation-duration: calc(var(--tiempo)* .09);
     opacity: 0%;
     animation-fill-mode: forwards;
+    transform: translateX(-50%);
 }
 
 .koji {    
-    animation-name: fade;
+    animation-name: koji;
     animation-delay: calc(var(--tiempo)* .92);
     animation-duration: calc(var(--tiempo)* .075);
     opacity: 0%;
     animation-fill-mode: forwards;
 }
 
+@keyframes koji {
+    0% {
+        transform: translateX(110%);
+        opacity: 0%;
+    }
+    25% {
+        opacity: 100%;
+    }
+    99% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+        transform: translateX(-50%);
+    }
+}
+
 .koichi {    
-    animation-name: fade;
+    animation-name: koichi;
     animation-delay: calc(var(--tiempo)* .95);
     animation-duration: calc(var(--tiempo)* .045);
     opacity: 0%;
     animation-fill-mode: forwards;
+    transform: translateX(55%);
+}
+
+@keyframes koichi {    
+    0% {
+        transform: translateX(-110%);
+        opacity: 0%;
+    }
+    25% {
+        opacity: 100%;
+    }
+    99% {
+        opacity: 100%;
+    }
+    100% {
+        transform: translateX(50%);
+        opacity: 0%;
+    }
+}
+
+@keyframes fadeinfadeout {
+    0% {
+        opacity: 0%;
+    }
+    25% {
+        opacity: 100%;
+    }
+    75% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
 }
 
 .agunimon {
@@ -341,22 +489,17 @@ border: 1px solid blue; */
 }
 
 @keyframes trainmove {
-    0%{
-        clip: rect(0, 10px, 450px, 0);
+    0% {
+        transform: translateX(1%);
         opacity: 100%;
     }
-    20% {
-        clip: rect(0, 1380px, 600px, 0);
-    }
-    99.99%{
+    99.99% {
         opacity: 100%;
     }
     100% {
-        clip: rect(0, 6900px, 450px, 5500px);
-        left: -5475px;
         opacity: 0%;
+        transform: translateX(-130%);
     }
-    
 }
 
 @keyframes fade {
