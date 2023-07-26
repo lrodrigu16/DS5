@@ -19,13 +19,13 @@ body {
     align-items: center;
     border: 50px solid transparent;
     padding: 10px;
-    border-image: url(borders.png) 16.55% round;
+    border-image: url(Animation_Assets/borders.png) 16.55% round;
     margin: 0px;
 }
 
 .mainmenu {
     max-width: 90vw;
-    background: url("background.png") center repeat-x, linear-gradient(to bottom, #080000 50%, #281888 50%);
+    background: url("Animation_Assets/background.png") center repeat-x, linear-gradient(to bottom, #080000 50%, #281888 50%);
     background-size: contain;
     background-repeat: repeat-x; 
     background-position: center;
