@@ -13,10 +13,11 @@ body {
     min-width: 1400px;
     min-height: 825px; 
     width: 100vw;
-    height: 100vh;
+    height: max-content;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     border: 50px solid transparent;
     padding: 10px;
     border-image: url(Animation_Assets/borders.png) 16.55% round;
@@ -42,8 +43,27 @@ body {
     background: url("Animation_Assets/sand.png") center repeat-x, linear-gradient(to bottom, #0048d8 50%, #e8dbab 50%);
     background-size: contain;
     background-repeat: repeat-x; 
+    background-position: center;  
+}
+.border {
+    border: 3px solid transparent;
+    border-color: #000;
+    border-radius: 15px;
+}
+.individual {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 90vw;
+    background: url("Animation_Assets/sand.png") center repeat-x, linear-gradient(to bottom, #0048d8 50%, #e8dbab 50%);
+    background-size: contain;
+    background-repeat: repeat-x; 
     background-position: center;
-    
+}
+.resultados {
+    padding: 10px;
 }
 
 .animationbox{
@@ -81,19 +101,31 @@ body {
     padding: 40px;
     cursor: pointer;
     background: transparent;
-    max-width: 350px;
     min-width: 300px;
-    width: calc(100% / 3);
+    width: max-content;
   }
-h1 {
+
+.font {
+    padding-left: 50px;
     color: #ffffff;
     text-shadow:
-    3px 3px 0 #000,
+    2.5px 2.1px 0 #000,
     -1px -1px 0 #000,  
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+h1 {
+
     font-size: 50px;
+}
+h2 {
+
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;
 }
 
   .transparent span {
@@ -138,7 +170,36 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
+
+.columnas {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.lowfadein {
+    animation-duration: 5s;
+    animation-name: lowfade;
+    animation-delay: 300ms;
+    animation-fill-mode: backwards;
+}
+
+@keyframes lowfade {
+    0% {
+        opacity: 0%;
+    }
+    25% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
 @keyframes backgroundanim {
     1.98% {
         background: linear-gradient(to bottom, #000, #000);
