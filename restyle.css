@@ -1,0 +1,449 @@
+:root {
+    --tiempo: 45s;
+}
+
+body {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box{
+    min-width: 1400px;
+    min-height: 825px; 
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 50px solid transparent;
+    padding: 10px;
+    border-image: url(borders.png) 16.55% round;
+    margin: 0px;
+}
+
+.mainmenu {
+    max-width: 90vw;
+    background: url("background.png") center repeat-x, linear-gradient(to bottom, #080000 50%, #281888 50%);
+    background-size: contain;
+    background-repeat: repeat-x; 
+    background-position: center;
+    
+}
+
+.lab {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 90vw;
+    background: url("Animation_Assets/sand.png") center repeat-x, linear-gradient(to bottom, #0048d8 50%, #e8dbab 50%);
+    background-size: contain;
+    background-repeat: repeat-x; 
+    background-position: center;
+    
+}
+
+.animationbox{
+    width: 1400px;
+    height: 825px;
+    animation-name: backgroundanim;
+    animation-duration: var(--tiempo);
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-delay: 100ms;
+    overflow: hidden;
+}
+
+.transparent {
+    -webkit-text-stroke: 1px black;
+    -webkit-text-fill-color: white;
+    text-shadow:
+    3px 3px 0 #000,
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    position: relative;
+    margin: 20px;
+    text-align: center;
+    font-size: 30px;
+    line-height: .5rem;
+    vertical-align: middle;
+    color: #ffffff;
+    display: inline-block;
+    border-width: 0;
+    border-style: solid;
+    border-color: #0498f5;
+    padding: 40px;
+    cursor: pointer;
+    background: transparent;
+    max-width: 350px;
+    min-width: 300px;
+    width: calc(100% / 3);
+  }
+h1 {
+    color: #ffffff;
+    text-shadow:
+    3px 3px 0 #000,
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    font-size: 50px;
+}
+
+  .transparent span {
+    z-index: 20;
+    position: relative;
+  }
+  
+  
+  .transparent::before, .transparent::after {
+    content: '';
+    position: absolute;
+    border-color: inherit;
+    border-style: inherit;
+    height: 50%;
+    width: 100%;
+    left: 0;
+    z-index: 10;
+    background: linear-gradient(90deg, #e800c6, #39002c 35% 65%,#e800c6);
+  }
+  
+  .transparent::before {
+    border-width: 2px 2px 0 2px;
+    top: -2px;
+    transform-origin: center bottom;
+    transform: perspective(1.5rem) rotateX(6deg);
+  }
+  
+  .transparent::after {
+    border-width: 0 2px 2px 2px;
+    bottom: -2px;
+    transform-origin: center top;
+    transform: perspective(1.5rem) rotateX(-6deg);
+  }
+
+  .transparent:hover::after, .transparent:hover::before  {
+    background: linear-gradient(90deg, #f64bfb, white 40% 60%,#f64bfb);
+    border-color: #05f8fb;
+  }
+
+.espaciado {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+@keyframes backgroundanim {
+    1.98% {
+        background: linear-gradient(to bottom, #000, #000);
+    }
+    1.99% {
+        background: linear-gradient(to bottom, #0000f8, #0000f8);
+    }
+    2% {
+        background: linear-gradient(to bottom, #0000f8, #0000f8);
+    }
+    2.1% {
+        background: linear-gradient(to bottom, #000, #000);
+    }
+    4.98% {
+        background: linear-gradient(to bottom, #000, #000);
+    }
+    4.99% {
+        background: linear-gradient(to bottom, #0000f8, #0000f8);
+    }
+    5% {
+        background: linear-gradient(to bottom, #0000f8, #0000f8);
+    }
+    5.1% {
+        background: linear-gradient(to bottom, #000, #000);
+    }
+    18.25% {
+        background: linear-gradient(to bottom, #000, #000);
+    }
+    19% {
+        background: linear-gradient(to bottom, #000, #f80000 20% 80%, #000);
+    }
+    50% {
+        background: linear-gradient(to bottom, #000, #f80000 20% 80%, #000);
+    }
+    51% {
+        background: linear-gradient(to bottom, white, white);
+    }
+    52% {
+        background: linear-gradient(to bottom, white, white);
+    }
+    53% {
+        background: linear-gradient(to bottom, #0000f8, #000 25%);
+    }
+    91% {
+        background: linear-gradient(to bottom, #0000f8, #000 25%);
+    }
+    92% {
+        background: linear-gradient(to bottom, #000 10%, #a800a8 25%, #000 45%)
+    }
+    99% {
+        background: linear-gradient(to bottom, #000 10%, #a800a8 25%, #000 45%)    
+    }
+    100% {
+        background: linear-gradient(to bottom, #000, #f80000 20% 80%, #000);
+    } 
+}
+
+.cherubi1 {
+    animation-name: cherub;
+    animation-duration: calc(var(--tiempo)* .07);
+    animation-fill-mode: forwards;
+}
+
+.logoanim {
+    animation-name: logo;
+    top: 10%;
+    animation-duration: var(--tiempo);
+    opacity: 0%;
+    animation-fill-mode: forwards;
+}
+
+@keyframes logo {
+    19% {
+        opacity: 0%;
+    }
+    19.1% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    51% {
+        opacity: 0%;
+    }
+    99.8% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+
+}
+
+/* position: absolute;
+top: 10%;
+right: 40%;
+bottom: 20%;
+left: 15%;
+background: gold;
+border: 1px solid blue; */
+
+.takuya {
+    animation-name: fade;
+    animation-delay: calc(var(--tiempo)* .53);
+    animation-duration: calc(var(--tiempo)* .1);
+    opacity: 0%;
+    animation-fill-mode: forwards;
+}
+
+.zoe {
+    animation-name: fade;
+    animation-delay: calc(var(--tiempo)* .63);
+    animation-duration: calc(var(--tiempo)* .1);
+    opacity: 0%;
+    animation-fill-mode: forwards;
+}
+
+.junpei {
+    animation-name: fade;
+    animation-delay: calc(var(--tiempo)* .73);
+    animation-duration: calc(var(--tiempo)* .1);
+    opacity: 0%;
+    animation-fill-mode: forwards;
+}
+
+.tommy {    
+    animation-name: fade;
+    animation-delay: calc(var(--tiempo)* .83);
+    animation-duration: calc(var(--tiempo)* .09);
+    opacity: 0%;
+    animation-fill-mode: forwards;
+}
+
+.koji {    
+    animation-name: fade;
+    animation-delay: calc(var(--tiempo)* .92);
+    animation-duration: calc(var(--tiempo)* .075);
+    opacity: 0%;
+    animation-fill-mode: forwards;
+}
+
+.koichi {    
+    animation-name: fade;
+    animation-delay: calc(var(--tiempo)* .95);
+    animation-duration: calc(var(--tiempo)* .045);
+    opacity: 0%;
+    animation-fill-mode: forwards;
+}
+
+.agunimon {
+    animation-name: fade;
+    animation-delay: calc(var(--tiempo)* .08);
+    animation-duration: calc(var(--tiempo)* .015);
+    opacity: 0%;
+    animation-fill-mode: forwards;
+}
+
+.fairymon {
+    animation-name: fade;
+    animation-delay: calc(var(--tiempo)* .1);
+    animation-duration: calc(var(--tiempo)* .015);
+    opacity: 0%;
+    animation-fill-mode: forwards;
+}
+
+.beetlemon {
+    animation-name: fade;
+    animation-delay: calc(var(--tiempo)* .12);
+    animation-duration: calc(var(--tiempo)* .015);
+    opacity: 0%;
+    animation-fill-mode: forwards;
+}
+
+.kumamon {    
+    animation-name: fade;
+    animation-delay: calc(var(--tiempo)* .14);
+    animation-duration: calc(var(--tiempo)* .015);
+    opacity: 0%;
+    animation-fill-mode: forwards;
+}
+
+.lobomon {    
+    animation-name: fade;
+    animation-delay: calc(var(--tiempo)* .16);
+    animation-duration: calc(var(--tiempo)* .015);
+    opacity: 0%;
+    animation-fill-mode: forwards;
+}
+
+.train {
+    opacity: 0%;   
+    position: absolute;
+    top: 200px;
+    left: 1405px;
+    animation-name: trainmove;
+    animation-timing-function: linear;
+    animation-delay: calc(var(--tiempo)* .53);
+    animation-duration: calc(var(--tiempo)* .375);
+    animation-fill-mode: forwards;
+}
+
+@keyframes trainmove {
+    0%{
+        clip: rect(0, 10px, 450px, 0);
+        opacity: 100%;
+    }
+    20% {
+        clip: rect(0, 1380px, 600px, 0);
+    }
+    99.99%{
+        opacity: 100%;
+    }
+    100% {
+        clip: rect(0, 6900px, 450px, 5500px);
+        left: -5475px;
+        opacity: 0%;
+    }
+    
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0%;
+    }
+    0.01% {
+        opacity: 100%;
+    }
+    99.99% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+.image1 {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.image2 {
+    position: absolute;
+}
+
+
+@keyframes cherub {
+    10% {
+        transform: translateX(1%)
+    }
+    15% {
+        transform: translateX(-1%);
+    }
+    20% {
+        transform: translateX(1%)
+    }
+    25% {
+        transform: translateX(-1%);
+    }
+    30% {
+        transform: translateX(1%)
+    }
+    35% {
+        transform: translateX(-1%);
+    }
+    40% {
+        transform: translateX(1%)
+    }
+    45% {
+        transform: translateX(-1%);
+    }
+    50% {
+        transform: translateX(1%)
+    }
+    55% {
+        transform: translateX(-1%);
+    }
+    60% {
+        transform: translateX(1%)
+    }
+    65% {
+        transform: translateX(-1%);
+    }
+    70% {
+        transform: translateX(1%)
+    }
+    75% {
+        transform: translateX(-1%);
+    }
+    80% {
+        transform: translateX(1%)
+    }
+    85% {
+        transform: translateX(-1%);
+    }
+    90% {
+        transform: translateX(1%)
+    }
+    95% {
+        transform: translateX(-1%);
+    }
+    99% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
